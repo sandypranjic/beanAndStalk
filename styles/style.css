@@ -1,0 +1,1125 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: .35em .75em .625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body, div, section, img, h1, h2, h3, h4, p, span, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #000;
+}
+
+.wrapper {
+  width: 80vw;
+  margin: 0 10vw;
+}
+
+header {
+  width: 100vw;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .logo {
+  width: 100%;
+  border-bottom: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+header .logo h2 {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+header .logo h3 {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+header .logo h2, header .logo h3 {
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+header .nav {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header li {
+  display: inline-block;
+}
+
+header li span {
+  cursor: pointer;
+}
+
+header nav {
+  display: inline-block;
+  width: 50%;
+}
+
+header nav li:nth-of-type(2) {
+  padding: 0 50px;
+}
+
+header .searchAndCart {
+  display: inline-block;
+  width: 50%;
+}
+
+header .searchAndCart ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .searchAndCart ul li:nth-of-type(1) {
+  padding: 0 50px;
+}
+
+header .headerImage {
+  width: 100%;
+  height: 70vh;
+  background-image: url("../assets/headerImage.jpg");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+header .headerImage .headerText {
+  color: #fff;
+  text-align: center;
+  width: 600px;
+}
+
+header .headerImage .headerText h1 {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10rem;
+  padding: 0;
+  line-height: 0.9;
+  margin-bottom: -10px;
+}
+
+header .headerImage .headerText span {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  display: block;
+  padding: 20px 0;
+}
+
+header .headerImage .headerText a {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  color: #fff;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  display: inline-block;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+header .headerImage .headerText a:hover, header .headerImage .headerText a:focus {
+  background-color: rgba(126, 193, 155, 0.5);
+}
+
+header .headerImageScroll {
+  padding-top: 50px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+header .scrollContainer {
+  position: static;
+  padding-top: 50px;
+  -webkit-transition: position 0.5s ease, z-index 0.7s ease, -webkit-transform 0.7s ease;
+  transition: position 0.5s ease, z-index 0.7s ease, -webkit-transform 0.7s ease;
+  transition: position 0.5s ease, transform 0.7s ease, z-index 0.7s ease;
+  transition: position 0.5s ease, transform 0.7s ease, z-index 0.7s ease, -webkit-transform 0.7s ease;
+}
+
+header .scrollContainerActive {
+  position: fixed;
+  top: 0px;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  left: 0;
+  background-color: #fff;
+  z-index: 5000;
+}
+
+.topBanners {
+  width: 100%;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 50px 0;
+}
+
+.topBanners .coffeeMenuBanner {
+  width: calc(((100% / 5) * 2) - 100px);
+  height: 100%;
+  margin-right: 100px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.topBanners .coffeeMenuBanner a {
+  color: #fff;
+}
+
+.topBanners .coffeeMenuBanner img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.topBanners .coffeeMenuBanner:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.topBanners .coffeeMenuBanner h4 {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+}
+
+.topBanners .coffeeMenuBanner h4 span {
+  display: block;
+}
+
+.topBanners .coffeeMenuBanner .coffeeMenuBannerText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.topBanners .coffeeMenuBanner .coffeeMenuBannerText div {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
+
+.topBanners .coffeeMenuBanner .coffeeMenuBannerText .seeMenu {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  color: #fff;
+  font-size: 3rem;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.topBanners .coffeeMenuBanner:hover .seeMenu {
+  background-color: rgba(237, 188, 136, 0.8);
+}
+
+.topBanners .newFriendBanner {
+  width: calc((100% / 5) * 3);
+  height: 100%;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.topBanners .newFriendBanner a {
+  color: #fff;
+}
+
+.topBanners .newFriendBanner img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.topBanners .newFriendBanner:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.topBanners .newFriendBanner h4 {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 7rem;
+  position: relative;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.topBanners .newFriendBanner h4::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: #7ec19b;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.topBanners .newFriendBanner:hover h4::after {
+  display: block;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.topBanners .newFriendBanner .newFriendBannerText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sustainabilityMission {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 100px 0;
+  background-color: #edbc88;
+  color: #fff;
+}
+
+.sustainabilityMission h4 {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.sustainabilityMission p {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.plantGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 20px;
+}
+
+.plantGallery .plantGalleryImg {
+  width: calc(100% / 3 - 10px);
+  height: 75vh;
+}
+
+.plantGallery .plantGalleryImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.addToCart {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  width: 500px;
+  height: 100vh;
+  background-color: #94c1a8;
+  z-index: 10000;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.addToCart .exitCart {
+  width: 100%;
+}
+
+.addToCart .exitCart .xCart {
+  z-index: 110000;
+  font-size: 4rem;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.addToCart .exitCart .xCart:hover {
+  color: #edbc88;
+}
+
+.addToCart .addToCartText {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.addToCart .addToCartText .addToCartHeader {
+  width: 100%;
+  height: auto;
+}
+
+.addToCart .addToCartText .itemsInCart {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  font-size: 3rem;
+  width: 100%;
+}
+
+.addToCart .addToCartText .numberOfItemsInOpenCartContainer {
+  width: 100%;
+}
+
+.addToCart .addToCartText p {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+.addToCart h5 {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hideCart {
+  right: -500px;
+}
+
+header .shopHeaderImage {
+  background-image: url("../assets/shopHeaderImage.jpg");
+}
+
+header .shopHeaderImage .shopHeaderText {
+  width: 100%;
+}
+
+.shopContainer {
+  padding: 100px 0;
+}
+
+.shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.shop .sortAndFilter {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 25%;
+}
+
+.shop .sortAndFilter h5 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 0 10px 0;
+  position: relative;
+}
+
+.shop .sortAndFilter h5:nth-of-type(2) {
+  padding-top: 20px;
+}
+
+.shop .sortAndFilter h5::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background-color: #000;
+}
+
+.shop .sortAndFilter li {
+  font-size: 2rem;
+  padding: 10px 0;
+}
+
+.shop .sortAndFilter li:hover {
+  cursor: pointer;
+  color: #7ec19b;
+}
+
+.shop .items {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.shop .items .plant {
+  width: calc(100% / 3 - 15px);
+  height: 50vh;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.shop .items .plant:hover .addToCartButton {
+  height: 75px;
+}
+
+.shop .items .plant:hover .addToCartButton span {
+  opacity: 1;
+  text-align: center;
+}
+
+.shop .items .plant .addToCartButton {
+  height: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(237, 188, 136, 0.7);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index: 4000;
+}
+
+.shop .items .plant .addToCartButton span {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  display: block;
+  opacity: 0;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  color: white;
+  padding-top: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shop .items .plant:nth-of-type(3n+2) {
+  margin: 0 20px;
+}
+
+.shop .items .plant img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.shop .items .nameAndPriceFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.shop .items .nameAndPriceFlex div:first-of-type {
+  width: 80%;
+}
+
+.shop .items .nameAndPriceFlex div:last-of-type {
+  width: 20%;
+  text-align: right;
+}
+
+.shop .items .name, .shop .items .price {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.subscribeForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 100px;
+}
+
+.subscribeForm form {
+  text-align: center;
+  width: 40%;
+}
+
+.subscribeForm form h4 {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #7ec19b;
+}
+
+.subscribeForm form p {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 3rem;
+  padding: 20px 0;
+}
+
+.subscribeForm form input {
+  width: calc(100% - 200px);
+  padding: 5px;
+  font-size: 3rem;
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  border: 2px solid #7ec19b;
+}
+
+.subscribeForm form button {
+  display: inline-block;
+  width: 200px;
+  padding: 5px;
+  font-size: 3rem;
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  border: 2px solid transparent;
+  background-color: #7ec19b;
+  color: #fff;
+}
+
+.footerNavContainer {
+  width: 100%;
+}
+
+.footerNav .footerFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+}
+
+.footerNav .footerFlex .bottomNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: 200px;
+}
+
+.footerNav .footerFlex .bottomNav ul li {
+  width: 150px;
+}
+
+.footerNav .footerFlex .bottomNav ul a {
+  font-family: poynter-oldstyle-display, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000;
+  padding: 20px 20px;
+  display: inline-block;
+  margin-left: -20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.footerNav .footerFlex .bottomNav ul a:hover {
+  color: #7ec19b;
+}
+
+.footerNav .footerFlex .socialMediaIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footerNav .footerFlex .socialMediaIcons li {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footerNav .footerFlex .socialMediaIcons a {
+  padding: 0 20px;
+  font-size: 4rem;
+  color: #edbc88;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footerNav .footerFlex .socialMediaIcons a:nth-of-type(3) {
+  padding-right: 0;
+}
+
+.footerNav .footerFlex .socialMediaIcons a:hover {
+  color: #de882c;
+}
+
+.footerNav h2 {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+}

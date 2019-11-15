@@ -1,0 +1,35 @@
+// colours
+
+$black: #000;
+$white: #fff;
+$orange: #edbc88;
+$seagreen: #7ec19b;
+
+
+// font mixins
+
+@mixin sans {
+    font-family: halyard-display, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin sansLight {
+    font-family: halyard-display, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+@mixin serif {
+    font-family: poynter-oldstyle-display, serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+// flexbox mixins
+
+@mixin centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

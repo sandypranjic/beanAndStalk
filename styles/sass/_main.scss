@@ -1,0 +1,208 @@
+.topBanners {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 50px 0;
+    .coffeeMenuBanner {
+        width: calc(((100% / 5) * 2) - 100px);
+        height: 100%;
+        margin-right: 100px;
+        text-align: center;
+        color: $white;
+        position: relative;
+        overflow: hidden;
+        a {
+            color: $white;
+        }
+        img {
+            object-position: center;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        &:hover img {
+            transform: scale(1.2);
+        }
+        h4 {
+            @include serif;
+            font-size: 6rem;
+            span {
+                display: block;
+            }
+        }
+        .coffeeMenuBannerText {
+            @include centre;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            div {
+                width: 100%;
+                height: 100%;
+                transform: translateY(25%);
+            }
+            .seeMenu {
+                @include sansLight;
+                color: $white;
+                font-size: 3rem;
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: all 0.3s ease;
+            }
+        }
+        &:hover .seeMenu {
+            background-color: rgba(237, 188, 136, 0.8);
+        }
+    }
+    .newFriendBanner {
+        width: calc((100% / 5) * 3);
+        height: 100%;
+        color: $white;
+        position: relative;
+        overflow: hidden;
+        a {
+            color: $white;
+        }
+        img {
+            object-position: center;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        &:hover img {
+            transform: scale(1.2);
+        }
+        h4 {
+            @include sans;
+            font-size: 7rem;
+            position: relative;
+            transition: all 0.8s ease;
+            &::after {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                content: "";
+                width: 100%;
+                height: 10px;
+                background-color: $seagreen;
+                opacity: 0;
+                transition: all 0.2s ease;
+            }
+        }
+        &:hover h4::after {
+            display: block;
+            opacity: 1;
+            transition: all 0.2s ease;
+        }
+        .newFriendBannerText {
+            @include centre;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.sustainabilityMission {
+    @include centre;
+    width: 100%;
+    padding: 100px 0;
+    background-color: $orange;
+    color: $white;
+    h4 {
+        @include sans;
+        font-size: 4rem;
+    }
+    p {
+        @include serif;
+        font-size: 3rem;
+    }
+}
+
+.plantGallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px;
+    .plantGalleryImg {
+        width: calc(100% / 3 - 10px);
+        height: 75vh;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    }
+}
+
+.addToCart {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 500px;
+    height: 100vh;
+    background-color: #94c1a8;
+    z-index: 10000;
+    transition: all 0.7s ease;
+    .exitCart {
+        width: 100%;
+        .xCart {
+        z-index: 110000;
+        font-size: 4rem;
+        color: $white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+            &:hover {
+            color: $orange;
+            }
+        }
+    }
+    .addToCartText {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        overflow: scroll;
+        .addToCartHeader {
+            width: 100%;
+            height: auto;
+        }
+        .itemsInCart {
+            @include sans;
+            color: $white;
+            font-size: 3rem;
+            width: 100%;
+        }
+        .numberOfItemsInOpenCartContainer {
+            width: 100%;
+        }
+        p {
+            @include sansLight;
+            font-size: 3rem;
+            color: $white;
+            text-align: center;
+        }
+    }
+    h5 {
+        @include sansLight;
+        color: $white;
+        font-size: 3rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.hideCart {
+    right: -500px;
+}

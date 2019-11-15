@@ -1,0 +1,100 @@
+.subscribeForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    form {
+        text-align: center;
+        width: 40%;
+        h4 {
+            @include serif;
+            font-size: 4rem;
+            color: $seagreen;
+        }
+        p {
+            @include sansLight;
+            font-size: 3rem;
+            padding: 20px 0;
+        }
+        input {
+            width: calc(100% - 200px);
+            padding: 5px;
+            font-size: 3rem;
+            @include sansLight;
+            border: 2px solid $seagreen;
+        }
+        button {
+            display: inline-block;
+            width: 200px;
+            padding: 5px;
+            font-size: 3rem;
+            @include sansLight;
+            border: 2px solid transparent;
+            background-color: $seagreen;
+            color: $white;
+        }
+    }
+}
+
+.footerNavContainer {
+    width: 100%;
+}
+
+.footerNav {
+    .footerFlex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
+        .bottomNav ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-height: 200px;
+            li {
+                width: 150px;            
+            }
+            a {
+                @include serif;
+                font-size: 2rem;
+                color: $black;
+                padding: 20px 20px;
+                display: inline-block;
+                margin-left: -20px;
+                transition: all 0.4s ease;
+                &:hover {
+                    color: $seagreen;
+                }
+            }
+        }
+        .socialMediaIcons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            li {
+                align-self: flex-end;
+            }
+            a {
+                padding: 0 20px;
+                font-size: 4rem;
+                color: $orange;
+                transition: all 0.3s ease;
+                &:nth-of-type(3) {
+                    padding-right: 0;
+                }
+                &:hover {
+                    color: #de882c;
+                }
+            }
+        }
+    }
+    h2 {
+        @include sans;
+        font-size: 3rem;
+    }
+}
+
