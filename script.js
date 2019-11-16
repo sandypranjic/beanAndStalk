@@ -117,24 +117,43 @@ $(".items").on("click", ".addToCartButton", function() {
     let plantImage = $(this).data("image");
     let trimmedPlantName = plantName.replace(/ /g,'');
     console.log(trimmedPlantName);
-    plantShop.checkQuantityInCart(trimmedPlantName);
+    // plantShop.checkQuantityInCart(trimmedPlantName);
     let cartItemHtml = `
-        <p data-name="${plantName}" data-price="${plantPrice}" data-image="${plantImage}">${plantName}</p>
+        <div class="plantInCart">
+            <div class="plantInCartImg">
+            <img src="${plantImage}" />
+            </div>
+            <div class="plantInCartText">
+                <span class="plantInCartName ${trimmedPlantName}" data-name="${trimmedPlantName}" data-price="${plantPrice}"></span>
+                <span class="plantInCartPrice ${trimmedPlantName}" data-name="${trimmedPlantName}">$${plantPrice}</span>
+            </div>
+        </div>
     `;
-    $(".itemsInCart").append(cartItemHtml);
-});
-
-plantShop.checkQuantityInCart = function(plantName) {
-    if (localStorage[plantName] == "null" || localStorage[plantName] == undefined) {
-        localStorage[plantName] = "1";
-        console.log(`${localStorage[plantName]} has been added to the local storage.`);
-    } else if (localStorage[plantName] >= 1) {
-        let quantityOfThisPlant = parseInt(localStorage[plantName]);
+    if (localStorage[trimmedPlantName] == "null" || localStorage[trimmedPlantName] == undefined) {
+        localStorage[trimmedPlantName] = "1";
+        console.log(`${localStorage[trimmedPlantName]} has been added to the local storage.`);
+        $(".itemsInCart").append(cartItemHtml);
+        $(`.plantInCartName.${trimmedPlantName}`).html(`${plantName} x 1`);
+    } else if (localStorage[trimmedPlantName] >= 1) {
+        let quantityOfThisPlant = parseInt(localStorage[trimmedPlantName]);
         quantityOfThisPlant++;
-        localStorage[plantName] = JSON.stringify(quantityOfThisPlant);
-        console.log(`The total quantity of ${plantName} is ${localStorage[plantName]}`);
+        localStorage[trimmedPlantName] = JSON.stringify(quantityOfThisPlant);
+        console.log(`The total quantity of ${trimmedPlantName} is ${localStorage[trimmedPlantName]}`);
+        let quantityTimesPrice = quantityOfThisPlant * plantPrice;
+        $(`.plantInCartPrice.${trimmedPlantName}`).html(`$${quantityTimesPrice}`);
+        $(`.plantInCartName.${trimmedPlantName}`).html(`${plantName} x ${quantityOfThisPlant}`);
     };
-};
+    let updatedPrice = parseInt(localStorage.totalPrice);
+    let integerPrice = parseInt(plantPrice);
+    updatedPrice = updatedPrice + integerPrice;
+    $(".priceSubTotal").html(`$${updatedPrice}`);
+    localStorage.totalPrice = JSON.stringify(updatedPrice);
+    let updatedPriceWithTax = parseInt(localStorage.totalPriceWithTax);
+    updatedPriceWithTax = updatedPrice * 0.13 + updatedPrice;
+    updatedPriceWithTax = updatedPriceWithTax.toFixed(2);
+    localStorage.totalPriceWithTax = JSON.stringify(updatedPriceWithTax).replace(/['"]+/g, '');
+    $(".priceTotal").html(`$${localStorage.totalPriceWithTax}`);
+});
 
 $(".allPlants").on("click", function() {
     $(".items").empty();
@@ -206,7 +225,17 @@ plantShop.init = function() {
         $(".cartText").html(`Cart (${plantShop.cartCounter})`);
         $(".numberOfItemsInOpenCart").html(`You have ${plantShop.cartCounter} items in your cart.`);
     }
+
+    if (localStorage.getItem("totalPrice") == "null" || localStorage.getItem("totalPrice") == undefined && localStorage.getItem("totalPriceWithTax") == "null" || localStorage.getItem("totalPriceWithTax") == undefined) {
+        localStorage.setItem("totalPrice", "0");
+        localStorage.setItem("totalPriceWithTax", "0");
+    } 
+    else {
+        $(".priceSubTotal").html(`$${localStorage.totalPrice}`);
+        $(".priceTotal").html(`$${localStorage.totalPriceWithTax}`);
+    }
 };
+
 
 $(document).ready(function() {
     plantShop.init();

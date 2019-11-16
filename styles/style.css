@@ -762,9 +762,24 @@ header .scrollContainerActive {
   font-family: halyard-display, sans-serif;
   font-style: normal;
   font-weight: 100;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   text-align: center;
+}
+
+.addToCart .addToCartText .priceTotalContainer {
+  width: 100%;
+  text-align: left;
+  padding: 0 50px;
+}
+
+.addToCart .addToCartText .priceTotalContainer .priceTotalText {
+  display: block;
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  font-size: 2.5rem;
 }
 
 .addToCart h5 {
@@ -776,6 +791,59 @@ header .scrollContainerActive {
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.addToCart .plantInCart {
+  width: 100%;
+  max-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px 0;
+}
+
+.addToCart .plantInCart .plantInCartImg {
+  width: 40%;
+  max-height: 200px;
+  overflow: none;
+}
+
+.addToCart .plantInCart .plantInCartImg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  max-height: 200px;
+}
+
+.addToCart .plantInCart .plantInCartText {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  padding-left: 20px;
+  width: calc(60% - 20px);
+  color: #fff;
+}
+
+.addToCart .plantInCart .plantInCartText .plantInCartName {
+  display: block;
+  font-size: 2rem;
+}
+
+.addToCart .plantInCart .plantInCartText .plantInCartPrice {
+  display: block;
+  font-size: 2rem;
 }
 
 .hideCart {
