@@ -1,3 +1,5 @@
+@import "mediaqueries";
+
 // stripping styles
 
 body, div, section, img, h1, h2, h3, h4, p, span, ul, li {
@@ -27,4 +29,9 @@ body {
 .wrapper {
     width: 80vw;
     margin: 0 10vw;
+    @include mobile {
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+    }
 }

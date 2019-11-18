@@ -200,6 +200,103 @@ $(".addToCart").on("click", ".xCart", function() {
     $(".addToCart").addClass("hideCart");
 });
 
+plantShop.reloadItemsInCart = function() {
+    plantShop.plantData.forEach(function(value) {
+        let trimmedValue = value.name.replace(/ /g,'');
+        let plantPrice = value.price;
+        let plantImage = value.image;
+        console.log(trimmedValue);
+        Object.keys(localStorage).forEach(function(savedItem) {
+            console.log(savedItem);
+            if (savedItem === trimmedValue) {
+                let quantityOfThisPlant = parseInt(localStorage[trimmedValue]);
+                let quantityTimesPrice = quantityOfThisPlant * plantPrice;
+                console.log(quantityTimesPrice);
+                let plantWithFixedSpacing = savedItem.replace(/([a-z])([A-Z])/g, '$1 $2');
+                console.log(`There is ${quantityOfThisPlant} of the plant ${plantWithFixedSpacing} in LocalStorage`);
+                let cartItemHtml = `
+                <div class="plantInCart">
+                    <div class="plantInCartImg">
+                    <img src="${plantImage}" />
+                    </div>
+                    <div class="plantInCartText">
+                        <span class="plantInCartName ${trimmedValue}" data-name="${trimmedValue}" data-price="${plantPrice}">${plantWithFixedSpacing} x ${quantityOfThisPlant}</span>
+                        <span class="plantInCartPrice ${trimmedValue}" data-name="${trimmedValue}">$${quantityTimesPrice}</span>
+                    </div>
+                </div>
+            `;
+                $(".itemsInCart").append(cartItemHtml);
+            }
+        });
+    });
+};
+
+$(".searchContainer").on("click", function() {
+    $(this).hide();
+    $(".searchBarContainer").addClass("searchBarActive");
+});
+
+$(".searchBarContainer").on("focusout", function() {
+    console.log("There's nothing in the search");
+    $(".searchContainer").show();
+    $(".searchBarContainer").removeClass("searchBarActive");
+});
+
+$(".searchBarContainer i").on("click", function() {
+    let searchTerm = $("#searchBar").val();
+    console.log(searchTerm);
+    $("#searchBar").val("");
+    $(".searchContainer").show();
+    $(".searchBarContainer").removeClass("searchBarActive");
+    plantShop.searchThroughDatabase(searchTerm);
+});
+
+$(".searchBarContainer input").on("keyup", function() {
+    let searchTerm = $("#searchBar").val();
+    plantShop.searchThroughDatabase(searchTerm);
+})
+
+$(".emptyCart").on("click", function() {
+    $(".itemsInCart").empty();
+    localStorage.clear();
+    plantShop.cartCounter = 0;
+    localStorage.setItem("totalPrice", "0");
+    localStorage.setItem("totalPriceWithTax", "0");
+    $(".priceSubTotal").html(`$${localStorage.totalPrice}`);
+    $(".priceTotal").html(`$${localStorage.totalPriceWithTax}`);
+    $(".numberOfItemsInOpenCart").html(`You have ${plantShop.cartCounter} items in your cart.`);
+})
+
+plantShop.searchThroughDatabase = function(searchTerm) {
+    $(".items").empty();
+    plantShop.plantData.forEach(function(value) {
+        let searchTermWithoutSpace = searchTerm.replace(/ /g,'');
+        let searchTermInLowerCase = searchTerm.toLowerCase();
+        let searchTermInLowerCaseWithoutSpaces = searchTerm.replace(/ /g,'').toLowerCase();
+        let valueWithSpacing = value.name.replace(/([a-z])([A-Z])/g, '$1 $2');
+        if (value.name.includes(searchTerm) === true || value.name.includes(searchTermWithoutSpace) === true || value.name.includes(searchTermInLowerCase) === true || value.name.includes(searchTermInLowerCaseWithoutSpaces) === true || value.name.toLowerCase().includes(searchTerm) === true || valueWithSpacing.includes(searchTerm) === true || value.commonName.includes(searchTerm) || value.commonName.toLowerCase().includes(searchTerm)) {
+            console.log(`The database contains the plant ${searchTerm}`);
+            const plantHtml = `
+            <div class="plant">
+                <img src="${value.image}" class="plantShopImg">
+                <div class="addToCartButton" data-name="${value.name}" data-image="${value.image}" data-price="${value.price}">
+                    <span>Add To Cart</span>
+                </div>
+                <div class="nameAndPriceFlex">
+                    <div>
+                        <span class="name">${value.name}</span>
+                    </div>
+                    <div>
+                        <span class="price">$${value.price}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        $(".items").append(plantHtml);
+        }
+    });
+};
+
 plantShop.init = function() {
     console.log("working");
     plantShop.filterPlants(plantShop.plantData);
@@ -236,7 +333,7 @@ plantShop.init = function() {
     }
 };
 
-
 $(document).ready(function() {
     plantShop.init();
+    plantShop.reloadItemsInCart();
 });
