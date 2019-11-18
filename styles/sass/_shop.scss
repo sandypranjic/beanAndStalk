@@ -75,7 +75,7 @@ header {
         li {
             font-size: 2rem;
             padding: 10px 0;
-            &:hover {
+            &:hover, &:focus {
                 cursor: pointer;
                 color: $seagreen;
             }
@@ -112,10 +112,10 @@ header {
             @include mobile {
                 height: 200px;
             }
-            &:hover .addToCartButton {
+            &:hover .addToCartButton, &:focus .addToCartButton {
                 height: 75px;
             }
-            &:hover .addToCartButton span {
+            &:hover .addToCartButton span, &:focus .addToCartButton span {
                 opacity: 1;
                 text-align: center;
             }

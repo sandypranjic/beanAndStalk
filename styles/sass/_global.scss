@@ -35,3 +35,64 @@ body {
         padding: 0 20px;
     }
 }
+
+.mobileOnly {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}
+
+.openMobileMenu {
+    background-color: transparent;
+    font-size: 3rem;
+    color: $black;
+    border: 0;
+    cursor: pointer;
+}
+
+.mobileMenu {
+    @include sansLight;
+    width: 320px;
+    background-color: $white;
+    position: fixed;
+    // width: 100vw;
+    height: 100vh;
+    z-index: 120000;
+    top: 0;
+    right: -320px;
+    transition: all 0.8s ease;
+    border-left: 1px solid #e3e3e3;
+    .exitMobileMenuButton {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: $seagreen;
+        font-size: 5rem;
+        background-color: transparent;
+        border: 0;
+        text-align: left;
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+    ul {
+        height: calc(100% - 50px);
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        li {
+            @include sansLight;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.slideOutMenu {
+    right: 0;
+}

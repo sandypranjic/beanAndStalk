@@ -270,6 +270,86 @@ body {
   }
 }
 
+.mobileOnly {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .mobileOnly {
+    display: block;
+  }
+}
+
+.openMobileMenu {
+  background-color: transparent;
+  font-size: 3rem;
+  color: #000;
+  border: 0;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  width: 320px;
+  background-color: #fff;
+  position: fixed;
+  height: 100vh;
+  z-index: 120000;
+  top: 0;
+  right: -320px;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  border-left: 1px solid #e3e3e3;
+}
+
+.mobileMenu .exitMobileMenuButton {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #7ec19b;
+  font-size: 5rem;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.mobileMenu ul {
+  height: calc(100% - 50px);
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobileMenu ul li {
+  font-family: halyard-display, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.slideOutMenu {
+  right: 0;
+}
+
 header {
   width: 100vw;
   height: 80vh;
@@ -651,7 +731,7 @@ header .scrollContainerActive {
   padding: 50px 0;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1100px) {
   .topBanners {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -675,7 +755,7 @@ header .scrollContainerActive {
   overflow: hidden;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1100px) {
   .topBanners .coffeeMenuBanner {
     width: 100%;
     margin: 20px 0;
@@ -707,6 +787,12 @@ header .scrollContainerActive {
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
+}
+
+@media (max-width: 1100px) {
+  .topBanners .coffeeMenuBanner h4 {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 680px) {
@@ -756,6 +842,13 @@ header .scrollContainerActive {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 1100px) {
+  .topBanners .coffeeMenuBanner .coffeeMenuBannerText .seeMenu {
+    font-size: 2.5rem;
+    padding: 5px 10px;
+  }
+}
+
 @media (max-width: 680px) {
   .topBanners .coffeeMenuBanner .coffeeMenuBannerText .seeMenu {
     font-size: 2rem;
@@ -775,7 +868,7 @@ header .scrollContainerActive {
   overflow: hidden;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1100px) {
   .topBanners .newFriendBanner {
     width: 100%;
   }
@@ -811,6 +904,12 @@ header .scrollContainerActive {
   transition: all 0.8s ease;
 }
 
+@media (max-width: 1100px) {
+  .topBanners .newFriendBanner h4 {
+    font-size: 5rem;
+  }
+}
+
 @media (max-width: 680px) {
   .topBanners .newFriendBanner h4 {
     font-size: 4rem;
@@ -830,7 +929,7 @@ header .scrollContainerActive {
   transition: all 0.2s ease;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1100px) {
   .topBanners .newFriendBanner h4::after {
     opacity: 1;
   }
@@ -926,7 +1025,7 @@ header .scrollContainerActive {
   padding: 100px 20px;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1100px) {
   .plantGallery {
     display: none;
   }
@@ -1347,7 +1446,7 @@ header .shopHeaderImage .shopHeaderText {
   padding: 10px 0;
 }
 
-.shop .sortAndFilter li:hover {
+.shop .sortAndFilter li:hover, .shop .sortAndFilter li:focus {
   cursor: pointer;
   color: #7ec19b;
 }
@@ -1415,11 +1514,11 @@ header .shopHeaderImage .shopHeaderText {
   }
 }
 
-.shop .items .plant:hover .addToCartButton {
+.shop .items .plant:hover .addToCartButton, .shop .items .plant:focus .addToCartButton {
   height: 75px;
 }
 
-.shop .items .plant:hover .addToCartButton span {
+.shop .items .plant:hover .addToCartButton span, .shop .items .plant:focus .addToCartButton span {
   opacity: 1;
   text-align: center;
 }
